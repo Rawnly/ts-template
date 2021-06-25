@@ -1,0 +1,29 @@
+{
+  "name": "ts-template",
+  "description": "Typescript project skeleton",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Rawnly/ts-template",
+  "license": "MIT",
+  "author": "Federico Vitale <hi@fedevitale.dev> (https://fedevitale.dev)",
+  "private": false,
+  "scripts": {
+    "build": "ttsc -p tsconfig.build.json",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "prebuild": "rm -rf dist",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "dependencies": {
+    "type-fest": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "jest": "^27.0.5",
+    "ts-jest": "^27.0.3",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.3.4",
+    "typescript-transform-paths": "^3.0.0"
+  }
+}
