@@ -12,6 +12,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "prebuild": "rm -rf dist",
+    "pretest": "eslint --fix src/**/*",
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
