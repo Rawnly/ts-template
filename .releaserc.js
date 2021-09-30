@@ -73,14 +73,14 @@ module.exports = {
 				]
 			}
 		],
+		"@semantic-release/github",
+
+		/** OR */
+
 		//   [
 		// 	"@semantic-release/gitlab", {
 		// 	  "gitlabUrl": "https://gitlab.com"
 		// 	}],
-
-		/** OR */
-
-		// "@semantic-release/github",
 		[
 			"@semantic-release/git",
 			{
