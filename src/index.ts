@@ -1,5 +1,7 @@
-export const sum = ( ...numbers: number[] ): number =>
-  numbers.reduce( ( a, b ) => a + b, 0 )
+import { messages } from './hello';
 
-export const multiply = ( ...numbers: number[] ): number =>
-  numbers.reduce( ( a, b ) => a * b, 1 )
+export const hello = ( name: string, locale: keyof typeof messages ) => {
+  const msg = messages[locale]
+
+  return msg.replace( '${name}', name )
+}

@@ -1,5 +1,9 @@
 {
   "root": true,
+  "env": {
+    "es2021": true,
+    "node": true
+  },
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
@@ -7,6 +11,16 @@
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "estensions": [".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "padding-line-between-statements": ["error",
       { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
@@ -19,6 +33,16 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/prefer-optional-chain": "error",
     "space-in-parens": ["warn", "always"],
+
+    // New
+    "no-tabs": "off",
+    "no-redeclare": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
+    // "import/extensions": ["error", {
+    //   "ts": "never"
+    // }],
+    // --
     "no-mixed-spaces-and-tabs": "warn",
     "newline-before-return": "warn",
     "no-trailing-spaces": "warn",
@@ -27,12 +51,12 @@
     }],
     "array-element-newline": ["warn", { "minItems": 4 }],
     "array-bracket-newline": ["warn", { "minItems": 4 }],
-    "indent": ["error", 2],
-    "comma-dangle": ["warn", "always-multiline", {
-      "imports": "never",
-      "objects": "never",
-      "arrays": "never",
-      "functions": "never"
-    }]
+    "comma-dangle": ["warn", "always-multiline"]
+    // "comma-dangle": ["warn", "always-multiline", {
+    //   "imports": "never",
+    //   "objects": "never",
+    //   "arrays": "never",
+    //   "functions": "never"
+    // }]
   }
 }

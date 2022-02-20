@@ -1,13 +1,10 @@
-import { sum } from '@src/index'
+import { hello } from '../src/index'
 
-describe( 'Sum', () => {
-  it( 'Should sum given numbers', () => {
-    const numbers: number[] = [1, 2, 3]
+describe( 'Hello', () => {
+  it( 'Should say hello to given name', () => {
+      const msg = hello( 'root', 'en' )
 
-    const result: number = sum( ...numbers );
-    const expected = 6 // 1 + 2 + 3
-
-    expect( result )
-      .toBe<number>( expected )
+      expect( msg )
+        .toBe( 'Hello root' )
   } )
 } )
