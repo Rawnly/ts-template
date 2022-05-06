@@ -1,10 +1,11 @@
-import { hello } from '../src/index'
+import { describe, expect, it } from 'vitest';
 
-describe( 'Hello', () => {
-  it( 'Should say hello to given name', () => {
-      const msg = hello( 'root', 'en' )
+import { hello } from '../src/index';
 
-      expect( msg )
-        .toBe( 'Hello root' )
-  } )
-} )
+describe('Hello', () => {
+	it('Should say hello to given name', () => {
+		const msg = hello('root', 'en');
+
+		expect(msg).toBe('Hello root');
+	});
+});
